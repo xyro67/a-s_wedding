@@ -44,7 +44,9 @@ export const loveStory: Chapter[] = [
     number: 'V',
     title: 'Growing Together',
     text: 'What began as a friendship between two batchmates gradually grew into a relationship built on understanding, companionship, and shared dreams.',
-    variant: 'verse',
+    variant: 'photo',
+    image: '/images/little-moments.jpg',
+    imageAlt: 'Akshay and Surya sharing a close, playful moment together',
   },
   {
     number: 'VI',
