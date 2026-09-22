@@ -584,7 +584,7 @@ function MusicToggle() {
         autoPlay
         loop
         preload="auto"
-        src="/audio/happy-indian-wedding.mp3"
+        src="/audio/sita-kalyanam.mp3"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onError={() => setAvailable(false)}
