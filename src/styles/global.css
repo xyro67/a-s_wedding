@@ -1346,25 +1346,26 @@ img {
   100% { background: linear-gradient(180deg, #fbf0e2, var(--rose)); }
 }
 
-/* Photo chapters */
+/* Photo chapters — heading and text first, photograph directly underneath */
 .chapter--photo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: clamp(46px, 7vw, 110px);
-}
-
-.chapter--photo:nth-child(even) .chapter__frame {
-  order: 2;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: clamp(28px, 4vw, 42px);
 }
 
 .chapter__frame {
-  max-width: 430px;
+  width: min(430px, 100%);
   margin-inline: auto;
 }
 
 .chapter--photo .chapter__copy {
-  max-width: 460px;
+  max-width: 620px;
+  text-align: center;
+}
+
+.chapter--photo .chapter__motif {
+  margin-inline: auto;
 }
 
 /* Chapter IV — the emotional highlight, on temple maroon */
@@ -2084,15 +2085,6 @@ img {
 
   .story__timeline::before {
     display: none;
-  }
-
-  .chapter--photo {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .chapter--photo:nth-child(even) .chapter__frame {
-    order: 0;
   }
 
   .chapter__frame {
