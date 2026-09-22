@@ -259,11 +259,6 @@ function Story() {
             viewport={{ once: true, margin: '-10%' }}
             transition={{ duration: 0.75 }}
           >
-            {chapter.variant === 'photo' && chapter.image && (
-              <div className="chapter__frame glow-card">
-                <FramedPhoto src={chapter.image} alt={chapter.imageAlt ?? ''} />
-              </div>
-            )}
             <div className="chapter__copy">
               {chapter.variant === 'finale' ? <Pookalam className="chapter__emblem" /> : <Lotus className="chapter__motif" />}
               <p className="chapter__label">
@@ -273,6 +268,11 @@ function Story() {
               <p className="chapter__text">{chapter.text}</p>
               {chapter.variant === 'highlight' && <FlowerButterfly className="chapter__bloom" />}
             </div>
+            {chapter.variant === 'photo' && chapter.image && (
+              <div className="chapter__frame glow-card">
+                <FramedPhoto src={chapter.image} alt={chapter.imageAlt ?? ''} />
+              </div>
+            )}
           </motion.article>
         ))}
       </div>
@@ -540,33 +540,55 @@ function MusicToggle() {
   const toggle = async () => {
     const audio = audioRef.current
     if (!audio) return
-    if (playing) {
+    if (!audio.paused) {
       audio.pause()
-      setPlaying(false)
       return
     }
     try {
       await audio.play()
-      setPlaying(true)
+      setAvailable(true)
     } catch {
       setAvailable(false)
     }
   }
 
   useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    // Browsers that permit autoplay start immediately. If they block it, the
+    // intro button sends this event within its user gesture and playback starts.
+    const startMusic = () => {
+      void audio.play().then(() => setAvailable(true)).catch(() => {
+        // Autoplay blocking is expected; keep the manual music control usable.
+      })
+    }
     const onVisibility = () => {
-      if (document.hidden && audioRef.current && !audioRef.current.paused) {
-        audioRef.current.pause()
-        setPlaying(false)
+      if (document.hidden && !audio.paused) {
+        audio.pause()
       }
     }
+    startMusic()
+    window.addEventListener('wedding-music-start', startMusic)
     document.addEventListener('visibilitychange', onVisibility)
-    return () => document.removeEventListener('visibilitychange', onVisibility)
+    return () => {
+      window.removeEventListener('wedding-music-start', startMusic)
+      document.removeEventListener('visibilitychange', onVisibility)
+    }
   }, [])
 
   return (
     <div className="music-wrap">
-      <audio ref={audioRef} loop preload="auto" src="/audio/happy-indian-wedding.mp3" onEnded={() => setPlaying(false)} />
+      <audio
+        ref={audioRef}
+        autoPlay
+        loop
+        preload="auto"
+        src="/audio/happy-indian-wedding.mp3"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onError={() => setAvailable(false)}
+      />
       {!available && (
         <span className="music-note" role="status">
           Music could not be played
@@ -586,10 +608,15 @@ function MusicToggle() {
 
 export default function App() {
   const [entered, setEntered] = useState(false)
+  const openInvitation = () => {
+    window.dispatchEvent(new Event('wedding-music-start'))
+    setEntered(true)
+  }
+
   return (
     <>
       <OrnamentDefs />
-      <AnimatePresence>{!entered && <Intro onEnter={() => setEntered(true)} />}</AnimatePresence>
+      <AnimatePresence>{!entered && <Intro onEnter={openInvitation} />}</AnimatePresence>
       <div className={entered ? 'site' : 'site site--locked'}>
         <Navigation />
         <main>
