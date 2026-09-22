@@ -44,8 +44,8 @@ export const wedding = {
 
 /** Decorative traditional wedding photograph, not a photograph of the couple. */
 export const heroPhoto = {
-  src: '/images/kerala-couple-riverside.jpg',
-  alt: 'A couple in Kerala kasavu attire seated by the backwaters beside a temple lamp and jasmine garlands',
+  src: '/images/kerala-temple-riverside.jpg',
+  alt: 'A Kerala temple lamp and jasmine garlands beside the backwaters at dusk',
 }
 
 /** Photographs that complement the story without repeating its chapter images. */
