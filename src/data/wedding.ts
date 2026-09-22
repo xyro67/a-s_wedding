@@ -15,14 +15,14 @@ export const wedding = {
     ritualsVenue: 'Kurumboor Mana, Guruvayur',
     ritualsTime: '10:00 AM to 1:00 PM',
     ritualsAddress: 'Police Quarters Road, behind Chavakkad Police Station, Chavakkad, Thrissur, Kerala 680506',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Guruvayur+Sree+Krishna+Temple+East+Nada+Guruvayur+Kerala+680101',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Police+Quarters+Road+Chavakkad+Guruvayur',
     ritualsMapUrl: 'https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Police+Quarters+Road+Chavakkad+Guruvayur',
   },
   reception: {
     day: 'THURSDAY',
     date: '3rd DECEMBER 2026',
-    venue: 'Amphi Theatre, Komachi Park, Boys Town, Wayanad',
-    address: 'Komachi Park, Boys Town, Mananthavady, Wayanad, Kerala 670644',
+    venue: 'Amphi Theatre, Komachi Park',
+    address: 'Boys Town, Mananthavady, Wayanad, Kerala 670644',
     time: '4:00 PM to 8:30 PM',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Komachi+Park+Amphitheatre+Boys+Town+Mananthavady+Wayanad',
   },
@@ -37,7 +37,7 @@ export const wedding = {
     },
   },
   closing: {
-    sharing: 'Sharing the happiness: Adarsh S Suresh along with Relatives & Friends',
+    sharing: 'Sharing the happiness: Adarsh S Suresh & Kichu Suresh along with Relatives & Friends',
     blessing: 'Your presence is our greatest gift; your blessings, our cherished treasure',
   },
 }
@@ -48,12 +48,12 @@ export const heroPhoto = {
   alt: 'A bride and groom in traditional Indian wedding attire holding hands, adorned with mehendi, gold jewellery and a rose garland',
 }
 
-/** The two non-selfie photographs live here, away from the story. */
+/** Photographs that complement the story without repeating its chapter images. */
 export const momentPhotos = [
   {
-    src: '/images/motorcycle-journey.jpg',
-    alt: 'Akshay and Surya setting out together on a motorcycle in the hills',
-    label: 'Adventures Together',
+    src: '/images/misty-hills.jpg',
+    alt: 'Akshay and Surya sharing a joyful moment among the misty hills',
+    label: 'Among the Misty Hills',
   },
   {
     src: '/images/celebration.jpg',
