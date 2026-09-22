@@ -44,8 +44,8 @@ export const wedding = {
 
 /** Decorative traditional wedding photograph, not a photograph of the couple. */
 export const heroPhoto = {
-  src: '/images/wedding-hands.jpg',
-  alt: 'A bride and groom in traditional Indian wedding attire holding hands, adorned with mehendi, gold jewellery and a rose garland',
+  src: '/images/kerala-couple-riverside.jpg',
+  alt: 'A couple in Kerala kasavu attire seated by the backwaters beside a temple lamp and jasmine garlands',
 }
 
 /** Photographs that complement the story without repeating its chapter images. */
