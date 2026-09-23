@@ -21,7 +21,7 @@ export const loveStory: Chapter[] = [
   {
     number: 'II',
     title: 'Cherished Friendship',
-    text: 'It was during our final year and internship that we began to know each other more deeply. Amidst busy hospital days, long conversations, and the simple moments we shared, a genuine bond gradually took shape.',
+    text: 'It was during our internship that we began to know each other more deeply. Amidst busy hospital days, long conversations, and the simple moments we shared, a genuine bond gradually took shape.',
     variant: 'photo',
     image: '/images/cherished-friendship.jpg',
     imageAlt: 'Akshay and Surya sharing a mirror selfie during their cherished friendship',
@@ -37,7 +37,7 @@ export const loveStory: Chapter[] = [
   {
     number: 'IV',
     title: 'When Friendship Became Love',
-    text: 'It was after that journey that our friendship blossomed into love.',
+    text: 'A few days after the journey, our friendship quietly blossomed into something more.',
     variant: 'highlight',
   },
   {
