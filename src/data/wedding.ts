@@ -53,6 +53,5 @@ export const momentPhotos = [
   {
     src: '/images/celebration.jpg',
     alt: 'Akshay and Surya dressed in a silk saree and suit for a celebration',
-    label: 'Graduated together',
   },
 ]
