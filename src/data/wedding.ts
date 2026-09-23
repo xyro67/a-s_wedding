@@ -37,7 +37,7 @@ export const wedding = {
     },
   },
   closing: {
-    sharing: 'Sharing the happiness: Adarsh S Suresh & Kichu Suresh along with Relatives & Friends',
+    sharing: 'Sharing the happiness: Adarsh S Suresh , Kichu Suresh & Usha Kabilan along with Relatives & Friends',
     blessing: 'Your presence is our greatest gift; your blessings, our cherished treasure',
   },
 }
@@ -50,11 +50,6 @@ export const heroPhoto = {
 
 /** Photographs that complement the story without repeating its chapter images. */
 export const momentPhotos = [
-  {
-    src: '/images/misty-hills.jpg',
-    alt: 'Akshay and Surya sharing a joyful moment among the misty hills',
-    label: 'Among the Misty Hills',
-  },
   {
     src: '/images/celebration.jpg',
     alt: 'Akshay and Surya dressed in a silk saree and suit for a celebration',
