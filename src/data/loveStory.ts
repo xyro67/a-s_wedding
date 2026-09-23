@@ -22,9 +22,7 @@ export const loveStory: Chapter[] = [
     number: 'II',
     title: 'Cherished Friendship',
     text: 'It was during our internship that we began to know each other more deeply. Amidst busy hospital days, long conversations, and the simple moments we shared, a genuine bond gradually took shape.',
-    variant: 'photo',
-    image: '/images/cherished-friendship.jpg',
-    imageAlt: 'Akshay and Surya sharing a mirror selfie during their cherished friendship',
+    variant: 'highlight'
   },
   {
     number: 'III',
