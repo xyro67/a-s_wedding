@@ -31,7 +31,7 @@ export const loveStory: Chapter[] = [
     title: 'A Journey Together',
     text: 'After completing our internship, we set out on a trip together. Away from the familiar surroundings of medical school and hospital life, we found ourselves spending more time together, discovering new sides of each other and forming memories that brought us closer.',
     variant: 'photo',
-    image: '/images/motorcycle-journey.jpg',
+    image: '/images/journey_together.jpg',
     imageAlt: 'Akshay and Surya setting out together on a motorcycle in the hills',
   },
   {
