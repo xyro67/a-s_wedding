@@ -28,7 +28,7 @@ export const wedding = {
   },
   families: {
     groom: {
-      names: 'Suresh Kumar M. R. & Sreenila Suresh',
+      names: 'Mr. Suresh Kumar M. R. & Mrs. Sreenila Suresh',
       address: 'Paleri House, Thondernad P.O., Korome, Wayanad – 670 731',
     },
     bride: {
