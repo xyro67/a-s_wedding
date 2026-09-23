@@ -397,8 +397,7 @@ function Moments() {
     <section className="moments section" id="moments">
       <SectionHeading
         label="In photographs"
-        title="Moments we cherish."
-        copy="A few memories from the journey that brought us to this day."
+        title="Moment we cherish."
       />
       <div className="moments__grid">
         {momentPhotos.map((photo, index) => (
