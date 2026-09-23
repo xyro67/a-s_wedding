@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown, ArrowLeft, ArrowRight, CalendarDays, Clock3, MapPin, Menu, Music2, Pause, X } from 'lucide-react'
 import {
-  ArchPhoto,
   CornerMotifs,
   Divider,
   FramedPhoto,
@@ -18,8 +17,9 @@ import { ButterflyLoader } from './components/ui/ButterflyLoader'
 import { FallingLeaves } from './components/ui/FallingLeaves'
 import { FlowerButterfly } from './components/ui/FlowerButterfly'
 import { GlowCard } from './components/ui/GlowCard'
+import { TempleScene } from './components/ui/TempleScene'
 import { loveStory } from './data/loveStory'
-import { heroPhoto, momentPhotos, wedding } from './data/wedding'
+import { momentPhotos, wedding } from './data/wedding'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -118,7 +118,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
         >
-          <ArchPhoto src={heroPhoto.src} alt={heroPhoto.alt} priority />
+          <TempleScene />
         </motion.div>
         <motion.div
           className="hero__copy"
