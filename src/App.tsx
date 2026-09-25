@@ -395,7 +395,7 @@ function Moments() {
 
   return (
         <section className="moments section" id="moments">
-      <SectionHeading label="In photographs" title="Moment we cherish." />
+      <SectionHeading label="In photographs" title="Moment we cherish" />
       <div className="moments__grid">
         {momentPhotos.map((photo, index) => (
           <motion.button
