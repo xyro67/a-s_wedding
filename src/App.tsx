@@ -394,11 +394,8 @@ function Moments() {
   }, [active])
 
   return (
-    <section className="moments section" id="moments">
-      <SectionHeading
-        label="In photographs"
-        title="Moment we cherish."
-      />
+        <section className="moments section" id="moments">
+      <SectionHeading label="In photographs" title="Moment we cherish." />
       <div className="moments__grid">
         {momentPhotos.map((photo, index) => (
           <motion.button
@@ -436,16 +433,18 @@ function Moments() {
             <button className="lightbox__close" onClick={() => setActive(null)} aria-label="Close photo">
               <X />
             </button>
-            <button
-              className="lightbox__arrow lightbox__arrow--left"
-              onClick={(event) => {
-                event.stopPropagation()
-                show(active - 1)
-              }}
-              aria-label="Previous photo"
-            >
-              <ArrowLeft />
-            </button>
+            {momentPhotos.length > 1 && (
+              <button
+                className="lightbox__arrow lightbox__arrow--left"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  show(active - 1)
+                }}
+                aria-label="Previous photo"
+              >
+                <ArrowLeft />
+              </button>
+            )}
             <motion.figure
               key={momentPhotos[active].src}
               initial={{ opacity: 0, scale: 0.96 }}
@@ -455,16 +454,18 @@ function Moments() {
               <img src={momentPhotos[active].src} alt={momentPhotos[active].alt} />
               <figcaption>{momentPhotos[active].label}</figcaption>
             </motion.figure>
-            <button
-              className="lightbox__arrow lightbox__arrow--right"
-              onClick={(event) => {
-                event.stopPropagation()
-                show(active + 1)
-              }}
-              aria-label="Next photo"
-            >
-              <ArrowRight />
-            </button>
+            {momentPhotos.length > 1 && (
+              <button
+                className="lightbox__arrow lightbox__arrow--right"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  show(active + 1)
+                }}
+                aria-label="Next photo"
+              >
+                <ArrowRight />
+              </button>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
