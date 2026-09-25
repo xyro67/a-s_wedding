@@ -55,4 +55,9 @@ export const momentPhotos = [
     alt: 'Akshay and Surya dressed in a silk saree and suit on their graduation day',
     label: 'Graduated Together',
   },
+  {
+    src: '/images/bouquet-of-joy.jpg',
+    alt: 'Akshay presenting Surya with a bouquet of flowers in a garden',
+    label: 'A Bouquet of Joy',
+  },
 ]
