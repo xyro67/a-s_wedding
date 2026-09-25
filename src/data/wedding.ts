@@ -48,10 +48,11 @@ export const heroPhoto = {
   alt: 'A Kerala temple lamp and jasmine garlands beside the backwaters at dusk',
 }
 
-/** Photographs that complement the story without repeating its chapter images. */
+/** Photograph that complements the story without repeating its chapter images. */
 export const momentPhotos = [
   {
     src: '/images/celebration.jpg',
-    alt: 'Akshay and Surya dressed in a silk saree and suit for a celebration',
+    alt: 'Akshay and Surya dressed in a silk saree and suit on their graduation day',
+    label: 'Graduated Together',
   },
 ]
